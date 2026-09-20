@@ -1,0 +1,45 @@
+<svg width="1500" height="720" viewBox="0 0 1500 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9A629"/>
+      <stop offset="100%" stop-color="#E77D00"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <path d="M76 329C149 280 223 260 297 249C413 232 501 254 583 261C693 270 777 234 860 206C980 170 1094 175 1190 220C1243 245 1287 278 1327 309L1346 322" stroke="#131313" stroke-width="30" stroke-linecap="round"/>
+    <path d="M146 319C256 287 366 266 499 269C659 273 797 309 940 338" stroke="#0E2C4E" stroke-width="13" stroke-linecap="round" opacity="0.9"/>
+
+    <g transform="translate(16,52)">
+      <circle cx="103" cy="156" r="64" fill="#B2B7BC"/>
+      <path d="M68 155C63 122 84 101 111 96C146 91 174 113 177 144C180 171 163 193 134 207L107 229H72L92 194H83C62 194 46 178 46 159C46 156 51 155 68 155Z" fill="#F8A42D"/>
+      <path d="M127 143H161L191 110L160 97L127 143Z" fill="#F8A42D" opacity="0.9"/>
+      <path d="M104 239L140 251L146 216L169 216L148 264L165 264L182 298H143L129 273L100 273L104 239Z" fill="#F8A42D"/>
+    </g>
+
+    <g transform="translate(957,5)">
+      <path d="M76 31L161 145V301H203V314H102V301H143V145L58 31H76Z" fill="url(#orangeGrad)"/>
+      <path d="M140 9L210 111" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round"/>
+      <path d="M208 111L143 137L154 187" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round"/>
+      <path d="M208 111H251" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round"/>
+      <path d="M207 111L265 137" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round"/>
+      <path d="M282 151L295 133L281 112L315 93L340 124L304 139L323 176L305 190L282 151Z" fill="#F8A42D"/>
+      <path d="M156 302L217 320" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round"/>
+      <path d="M137 224H179" stroke="#0E2C4E" stroke-width="10" stroke-linecap="round"/>
+    </g>
+
+    <g>
+      <path d="M275 325L411 286L531 325H275Z" fill="url(#orangeGrad)" opacity="0.97"/>
+      <path d="M411 286L499 210L586 286H411Z" fill="url(#orangeGrad)" opacity="0.97"/>
+      <path d="M285 286H760L715 335H330L285 286Z" fill="#0E2C4E" opacity="0.11"/>
+      <path d="M315 250H980L902 336H392L315 250Z" fill="#0E2C4E"/>
+      <text x="365" y="346" fill="#0E2C4E" font-family="Arial Black, Arial, sans-serif" font-size="278" font-weight="900" letter-spacing="-18">CCL</text>
+      <text x="116" y="492" fill="#F59B1D" font-family="Arial Black, Arial, sans-serif" font-size="192" font-weight="900" letter-spacing="-12">CLAVO</text>
+      <text x="170" y="592" fill="#0E2C4E" font-family="Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="2">CONSTRUCTION COMPANY LIMITED</text>
+    </g>
+
+    <path d="M955 235L1001 173L1043 235L1000 235L1048 304L1030 235L1093 235L1007 125L964 188L931 176L955 235Z" fill="url(#orangeGrad)"/>
+    <path d="M412 350H1149" stroke="#1B1B1B" stroke-width="20" stroke-linecap="round"/>
+    <path d="M260 319L666 323L719 332L804 334L925 318" stroke="#0E2C4E" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>
