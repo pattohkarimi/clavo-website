@@ -315,6 +315,24 @@ p {
   justify-content: flex-end;
 }
 
+.hero-image-full .btn-secondary,
+.services-hero-carousel .btn-secondary,
+.service-detail-hero .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.72);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-image-full .btn-secondary:hover,
+.hero-image-full .btn-secondary:focus-visible,
+.services-hero-carousel .btn-secondary:hover,
+.services-hero-carousel .btn-secondary:focus-visible,
+.service-detail-hero .btn-secondary:hover,
+.service-detail-hero .btn-secondary:focus-visible {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .hero-image-full h1,
 .hero-image-full .lead,
 .hero-image-full .hero-stats span,
