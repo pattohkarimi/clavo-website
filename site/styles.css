@@ -460,6 +460,13 @@ p {
   box-shadow: 0 22px 42px rgba(13, 43, 77, 0.14);
 }
 
+.service-card-image {
+  width: calc(100% + 48px);
+  height: 170px;
+  margin: -30px -24px 24px;
+  object-fit: cover;
+}
+
 .service-kicker {
   display: block;
   margin-bottom: 18px;
