@@ -66,6 +66,22 @@ button, input, textarea {
   color: var(--orange-deep);
 }
 
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: rgba(13, 43, 77, 0.58);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus-visible {
+  color: var(--orange-deep);
+}
+
 h1, h2, h3 {
   margin-top: 0;
   line-height: 1.1;
@@ -393,10 +409,17 @@ p {
 .service-card {
   position: relative;
   background: var(--white);
-  padding: 28px 22px;
+  min-height: 360px;
+  padding: 30px 24px;
   border-radius: 24px;
   border: 1px solid rgba(13, 43, 77, 0.08);
   box-shadow: 0 14px 28px rgba(13, 43, 77, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 42px rgba(13, 43, 77, 0.14);
 }
 
 .service-kicker {
@@ -429,6 +452,166 @@ p {
 .service-link:hover,
 .service-link:focus-visible {
   color: var(--orange-deep);
+}
+
+.service-category-grid,
+.detailed-service-grid,
+.capability-grid,
+.audience-grid,
+.resource-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.service-category-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-category {
+  padding: 32px;
+  background: var(--white);
+  border-left: 4px solid var(--orange);
+  box-shadow: 0 14px 28px rgba(13, 43, 77, 0.07);
+}
+
+.service-category h3 {
+  max-width: 360px;
+  font-size: 1.45rem;
+}
+
+.service-list,
+.benefit-list,
+.capability-list,
+.audience-list,
+.resource-list {
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+}
+
+.service-list li,
+.benefit-list li,
+.capability-list li,
+.audience-list li,
+.resource-list li {
+  position: relative;
+  padding-left: 20px;
+  color: rgba(13, 43, 77, 0.78);
+  font-size: 0.9rem;
+}
+
+.service-list li::before,
+.benefit-list li::before,
+.capability-list li::before,
+.audience-list li::before,
+.resource-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.detailed-service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detailed-service-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(13, 43, 77, 0.08);
+  box-shadow: 0 18px 38px rgba(13, 43, 77, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detailed-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 46px rgba(13, 43, 77, 0.14);
+}
+
+.detailed-service-card > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.detailed-service-body {
+  padding: 26px 24px 28px;
+}
+
+.detailed-service-body h3 {
+  font-size: 1.45rem;
+}
+
+.benefit-list {
+  display: grid;
+  gap: 8px;
+}
+
+.benefit-list li {
+  font-weight: 700;
+}
+
+.benefit-list li::before {
+  content: "✓";
+  top: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--orange-deep);
+  font-weight: 900;
+}
+
+.process-grid-six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-grid,
+.audience-grid,
+.resource-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+}
+
+.capability-list,
+.audience-list,
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin-top: 0;
+}
+
+.capability-list li,
+.audience-list li,
+.resource-list li {
+  padding: 16px 18px 16px 38px;
+  background: var(--grey-light);
+  font-weight: 700;
+}
+
+.capability-list li::before,
+.audience-list li::before,
+.resource-list li::before {
+  left: 18px;
+  top: 1.25em;
+}
+
+.safety-panel {
+  max-width: 820px;
+}
+
+.closing-cta {
+  max-width: 820px;
 }
 
 .icon-box {
@@ -600,6 +783,14 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  .detailed-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-grid-six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -617,7 +808,20 @@ p {
 
   .service-grid,
   .process-grid,
-  .field-row {
+  .field-row,
+  .service-category-grid,
+  .detailed-service-grid,
+  .capability-grid,
+  .audience-grid,
+  .resource-grid,
+  .process-grid-six {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list,
+  .capability-list,
+  .audience-list,
+  .resource-list {
     grid-template-columns: 1fr;
   }
 
