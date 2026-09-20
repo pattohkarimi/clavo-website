@@ -227,7 +227,7 @@ p {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(8, 29, 55, 0.9), rgba(8, 29, 55, 0.42)), url("images/kevo.jpg") center / cover no-repeat;
+  background: linear-gradient(90deg, rgba(8, 29, 55, 0.08), rgba(8, 29, 55, 0.9)), url("images/kevo.jpg") center / cover no-repeat;
 }
 
 .hero-image-full .hero-inner {
@@ -239,6 +239,13 @@ p {
 
 .hero-image-full .hero-copy {
   max-width: 760px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.hero-image-full .hero-actions,
+.hero-image-full .hero-stats {
+  justify-content: flex-end;
 }
 
 .hero-image-full h1,
