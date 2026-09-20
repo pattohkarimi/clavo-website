@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 100px;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
