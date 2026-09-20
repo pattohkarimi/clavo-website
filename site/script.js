@@ -17,4 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1800);
     });
   }
+
+  const heroSlides = document.querySelectorAll('.services-hero-slide');
+  let activeSlide = 0;
+
+  if (heroSlides.length > 1) {
+    setInterval(() => {
+      heroSlides[activeSlide].classList.remove('is-active');
+      activeSlide = (activeSlide + 1) % heroSlides.length;
+      heroSlides[activeSlide].classList.add('is-active');
+    }, 4000);
+  }
 });
