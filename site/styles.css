@@ -221,6 +221,37 @@ p {
   padding: 70px 0 80px;
 }
 
+.hero-image-full {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(8, 29, 55, 0.9), rgba(8, 29, 55, 0.42)), url("images/kevo.jpg") center / cover no-repeat;
+}
+
+.hero-image-full .hero-inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(1180px, calc(100% - 32px));
+}
+
+.hero-image-full .hero-copy {
+  max-width: 760px;
+}
+
+.hero-image-full h1,
+.hero-image-full .lead,
+.hero-image-full .hero-stats span,
+.hero-image-full .hero-stats strong {
+  color: var(--white);
+}
+
+.hero-image-full .hero-visual {
+  display: none;
+}
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
