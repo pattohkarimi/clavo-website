@@ -57,6 +57,10 @@ button, input, textarea {
   background: linear-gradient(180deg, var(--grey-light), rgba(255, 255, 255, 0.9));
 }
 
+.services.section {
+  padding: 72px 0;
+}
+
 .eyebrow {
   margin: 0 0 14px;
   text-transform: uppercase;
@@ -516,6 +520,10 @@ p {
   margin-bottom: 42px;
 }
 
+.services .section-heading {
+  margin-bottom: 28px;
+}
+
 .service-grid,
 .project-grid,
 .process-grid {
@@ -601,18 +609,31 @@ p {
 
 .service-category-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .service-category {
-  padding: 32px;
+  padding: 24px 26px;
   background: var(--white);
-  border-left: 4px solid var(--orange);
-  box-shadow: 0 14px 28px rgba(13, 43, 77, 0.07);
+  border: 1px solid rgba(13, 43, 77, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(13, 43, 77, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(13, 43, 77, 0.12);
 }
 
 .service-category h3 {
   max-width: 360px;
+  margin-bottom: 14px;
   font-size: 1.45rem;
+}
+
+.service-category .service-kicker {
+  margin-bottom: 12px;
 }
 
 .service-list,
@@ -628,7 +649,8 @@ p {
 .service-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 20px;
+  gap: 7px 20px;
+  margin-top: 14px;
 }
 
 
@@ -669,6 +691,11 @@ p {
   height: 7px;
   background: var(--orange);
   border-radius: 50%;
+}
+
+.service-category .service-link {
+  margin-top: 18px;
+  margin-right: 14px;
 }
 
 .detailed-service-grid {
