@@ -860,6 +860,33 @@ p {
   align-items: center;
 }
 
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.work-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(13, 43, 77, 0.1);
+}
+
+.work-gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.work-gallery figcaption {
+  padding: 14px 16px 16px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 .icon-box {
   width: 62px;
   height: 62px;
@@ -1069,6 +1096,14 @@ p {
   .audience-list,
   .resource-list {
     grid-template-columns: 1fr;
+  }
+
+  .work-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .work-gallery img {
+    height: 250px;
   }
 
   .brand-tag {
