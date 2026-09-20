@@ -461,9 +461,9 @@ p {
 
 .service-card-image {
   width: calc(100% + 48px);
-  height: 170px;
+  height: auto;
   margin: -30px -24px 24px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .service-kicker {
