@@ -613,6 +613,7 @@ p {
 }
 
 .service-category {
+  overflow: hidden;
   padding: 24px 26px;
   background: var(--white);
   border: 1px solid rgba(13, 43, 77, 0.08);
@@ -636,6 +637,13 @@ p {
   margin-bottom: 12px;
 }
 
+.service-category-image {
+  width: calc(100% + 52px);
+  height: 150px;
+  margin: -24px -26px 22px;
+  object-fit: cover;
+}
+
 .service-list,
 .benefit-list,
 .capability-list,
@@ -652,21 +660,6 @@ p {
   gap: 7px 20px;
   margin-top: 14px;
 }
-
-
-  .service-detail-hero {
-    min-height: 620px;
-  }
-
-  .service-detail-hero-content {
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .service-detail-layout,
-  .detail-columns {
-    grid-template-columns: 1fr;
-  }
 .service-list li,
 .benefit-list li,
 .capability-list li,
@@ -781,6 +774,33 @@ p {
 .resource-list li::before {
   left: 18px;
   top: 1.25em;
+}
+
+.resource-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.resource-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  background: var(--grey-light);
+  border: 1px solid rgba(13, 43, 77, 0.08);
+}
+
+.resource-gallery img {
+  display: block;
+  width: 100%;
+  height: 128px;
+  object-fit: cover;
+}
+
+.resource-gallery figcaption {
+  padding: 11px 12px;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .safety-panel {
@@ -1160,6 +1180,14 @@ p {
 
   .work-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .resource-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resource-gallery img {
+    height: 120px;
   }
 
   .work-gallery img {
