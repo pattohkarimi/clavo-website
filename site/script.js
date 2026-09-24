@@ -1,4 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.nav');
+  const mainNav = document.querySelector('.main-nav');
+
+  if (nav && mainNav) {
+    const menuButton = document.createElement('button');
+    menuButton.className = 'mobile-menu-toggle';
+    menuButton.type = 'button';
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.innerHTML = '<span></span><span></span><span></span>';
+    mainNav.before(menuButton);
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    mainNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('nav-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+  }
+
+  const footerInner = document.querySelector('.footer-inner');
+  if (footerInner && !footerInner.querySelector('.footer-quick-links')) {
+    const quickLinks = document.createElement('nav');
+    quickLinks.className = 'footer-quick-links';
+    quickLinks.setAttribute('aria-label', 'Footer quick links');
+    quickLinks.innerHTML = '<strong>Quick links</strong><a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>';
+    footerInner.insertBefore(quickLinks, footerInner.lastElementChild);
+  }
+
+  const whatsapp = document.createElement('a');
+  whatsapp.className = 'whatsapp-float';
+  whatsapp.href = 'https://wa.me/254724903463?text=Hello%20CLAVO%20Construction%2C%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20and%20request%20a%20quote.';
+  whatsapp.target = '_blank';
+  whatsapp.rel = 'noopener noreferrer';
+  whatsapp.setAttribute('aria-label', 'Chat with CLAVO Construction on WhatsApp');
+  whatsapp.innerHTML = '<span aria-hidden="true">WA</span><b>WhatsApp</b>';
+  document.body.appendChild(whatsapp);
+
+  const quoteLinks = Array.from(document.querySelectorAll('a[href="contact.html"], a[href="index.html#contact"]'))
+    .filter((link) => /quote|project|consultation/i.test(link.textContent));
+
+  quoteLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const pageTitle = document.title.split('|')[0].trim();
+      const pageUrl = window.location.href;
+      const subject = `Quote request from website: ${pageTitle}`;
+      const body = [
+        'Hello CLAVO Construction Company Limited,',
+        '',
+        'I found your company through your website and would like to request a quote for the work described on this page.',
+        '',
+        `Work page: ${pageTitle}`,
+        `Page link: ${pageUrl}`,
+        '',
+        'Please contact me to discuss the scope, site requirements, timeline, and quotation.',
+        '',
+        'Name:',
+        'Phone:',
+        'Project location:',
+        'Additional details:'
+      ].join('\n');
+
+      event.preventDefault();
+      window.location.href = `mailto:clavoconstructionsltd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
+
   const form = document.querySelector('.contact-form');
 
   if (form) {

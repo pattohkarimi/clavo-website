@@ -1116,10 +1116,34 @@ p {
   color: rgba(255,255,255,0.5);
 }
 
+.contact-address {
+  margin-top: 24px;
+  color: rgba(13, 43, 77, 0.78);
+  font-style: normal;
+  line-height: 1.75;
+}
+
+.contact-address strong {
+  color: var(--blue);
+}
+
+.contact-address a,
+.hero-stats a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.contact-address a:hover,
+.contact-address a:focus-visible,
+.hero-stats a:hover,
+.hero-stats a:focus-visible {
+  color: var(--orange-deep);
+}
+
 .site-footer {
   background: var(--blue-deep);
-  color: rgba(255,255,255,0.7);
-  padding: 22px 0;
+  color: var(--white);
+  padding: 30px 0;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -1133,6 +1157,82 @@ p {
 
 .footer-brand .brand-name {
   color: var(--white);
+}
+
+.footer-inner p {
+  margin: 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 0.82rem;
+}
+
+.footer-inner p::after {
+  content: " Designed by CVSIX Media.";
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.footer-credit {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.footer-quick-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+}
+
+.footer-quick-links strong {
+  color: var(--white);
+}
+
+.footer-quick-links a {
+  color: rgba(255,255,255,0.78);
+}
+
+.footer-quick-links a:hover,
+.footer-quick-links a:focus-visible {
+  color: var(--orange);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px 12px 12px;
+  color: var(--white);
+  background: #168c4b;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.whatsapp-float span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255,255,255,0.85);
+  border-radius: 50%;
+  font-size: 0.62rem;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  color: var(--white);
+  background: #0f703b;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 980px) {
@@ -1169,7 +1269,48 @@ p {
   }
 
   .nav {
-    min-height: 80px;
+    position: relative;
+  }
+
+  .mobile-menu-toggle {
+    display: grid;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--white);
+  }
+
+  .nav > .btn-primary {
+    display: none;
+  }
+
+  .nav.nav-open .main-nav {
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 0;
+    left: 0;
+    z-index: 30;
+    display: grid;
+    gap: 0;
+    padding: 8px;
+    background: var(--blue-deep);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 28px rgba(0,0,0,0.18);
+  }
+
+  .nav.nav-open .main-nav a {
+    padding: 13px 14px;
   }
 
   .hero {
@@ -1205,6 +1346,17 @@ p {
 
   .resource-gallery img {
     height: 120px;
+  }
+
+  .footer-quick-links {
+    width: 100%;
+    order: 3;
+  }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 13px 10px 10px;
   }
 
   .work-gallery img {
