@@ -1128,7 +1128,8 @@ p {
 }
 
 .contact-address a,
-.hero-stats a {
+.hero-stats a,
+.contact-copy a {
   color: var(--blue);
   font-weight: 700;
 }
@@ -1136,7 +1137,9 @@ p {
 .contact-address a:hover,
 .contact-address a:focus-visible,
 .hero-stats a:hover,
-.hero-stats a:focus-visible {
+.hero-stats a:focus-visible,
+.contact-copy a:hover,
+.contact-copy a:focus-visible {
   color: var(--orange-deep);
 }
 
