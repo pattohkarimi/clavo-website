@@ -990,7 +990,7 @@ p {
 }
 
 .project-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card {
@@ -1006,8 +1006,25 @@ p {
   object-fit: cover;
 }
 
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1.35fr 0.825fr 0.825fr;
+  gap: 3px;
+  background: var(--grey-light);
+}
+
+.project-gallery img {
+  height: 220px;
+}
+
 .project-body {
   padding: 20px 22px 24px;
+}
+
+.project-body p {
+  color: rgba(13, 43, 77, 0.76);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .project-body span {
