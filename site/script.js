@@ -78,17 +78,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const button = form.querySelector('button');
-      const originalText = button.textContent;
+      if (!form.reportValidity()) return;
 
-      button.textContent = 'Inquiry Sent';
-      button.disabled = true;
+      const name = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const projectType = form.elements.projectType.value.trim();
+      const message = form.elements.message.value.trim();
+      const subject = `Website inquiry: ${projectType}`;
+      const body = [
+        'Hello CLAVO Construction Company Limited,',
+        '',
+        'I found CLAVO through your website and would like to discuss a project.',
+        '',
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Project type: ${projectType}`,
+        '',
+        'Project details:',
+        message
+      ].join('\n');
 
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-        form.reset();
-      }, 1800);
+      window.location.href = `mailto:clavoconstructionsltd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 

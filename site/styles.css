@@ -1079,6 +1079,7 @@ p {
 }
 
 .contact-form {
+  min-width: 0;
   background: linear-gradient(135deg, rgba(13, 43, 77, 0.98), rgba(15, 59, 95, 0.96));
   padding: 30px 28px;
   border-radius: 28px;
@@ -1102,6 +1103,8 @@ p {
 
 .contact-form input,
 .contact-form textarea {
+  min-width: 0;
+  max-width: 100%;
   width: 100%;
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.04);
