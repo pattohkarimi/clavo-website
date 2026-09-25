@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.clavoconstructionsltd.co.ke/sitemap.xml
