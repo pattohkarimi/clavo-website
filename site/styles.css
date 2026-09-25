@@ -1325,6 +1325,13 @@ p {
 
   .nav.nav-open .main-nav a {
     padding: 13px 14px;
+    color: var(--white);
+  }
+
+  .nav.nav-open .main-nav a:hover,
+  .nav.nav-open .main-nav a:focus-visible {
+    color: var(--orange);
+    background: rgba(255,255,255,0.08);
   }
 
   .hero {
