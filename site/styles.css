@@ -1276,22 +1276,33 @@ p {
   }
 
   .mobile-menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
     display: grid;
     gap: 4px;
     width: 42px;
     height: 42px;
-    margin-left: auto;
     padding: 10px;
-    border: 1px solid rgba(255,255,255,0.22);
+    border: 2px solid var(--orange-deep);
     border-radius: 8px;
-    background: transparent;
+    background: var(--orange);
     cursor: pointer;
+    transform: translateY(-50%);
   }
 
   .mobile-menu-toggle span {
     display: block;
     height: 2px;
-    background: var(--white);
+    background: var(--blue-deep);
+  }
+
+  .mobile-menu-toggle:hover,
+  .mobile-menu-toggle:focus-visible {
+    background: var(--orange-deep);
+    outline: 3px solid rgba(245, 155, 29, 0.28);
+    outline-offset: 2px;
   }
 
   .nav > .btn-primary {
